@@ -4,38 +4,315 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     
     <title>Reddit Layout</title>
 </head>
 <body>
     <div class="container">
 
-        <div class="header">
-            <div class="start">
-                <h1 class="title">Reddit</h1>
+        <div class="header"> 
+            <div class="header__start">
+                <h1 class="header__logo">Räddit</h1>
+
+                <i class="home-icon fa-solid fa-house"></i> 
+                <select class="header__filter">
+                    <option value="">Home</option>
+                </select>
             </div>
-            <div class="center"></div>
-            <div class="end"></div>
-        </div>
-
-        <main class="main"> Main
-            <div class="content">
-                <ul class="content-list">
-                    
-
-                </ul>
+            <div class="header__center">
+                <i class="search-icon fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="header__search" placeholder="Search Räddit">
+            </div>
+            <div class="header__end">
                 
-                <div class="sidebar">
-                    <ul class="sidebar-list">
+                <div class="header__toolbar">
+                    <button class="button-toolbar"><i class="fa-solid fa-comment-dots"></i></button>
+                    <button class="button-toolbar"><i class="fa-solid fa-bell"></i></button>
+                    <button class="button-toolbar"><i class="fa-solid fa-plus"></i></button>
 
-                    </ul>
+                </div>
+
+                <div class="header__user-profile">
+                    <i class="user-icon fa-solid fa-user"></i>
                 </div>
             </div>
-        </main>
+        </div>
+
+        <div class="content">
+
+            <ul class="forum">
+
+                <li class="forum__post create-post">
+                    <input type="text" class="create-post-input" placeholder="Create Post">
+                </li>
+
+                <li class="forum__post filter-by">
+                    <button>Best</button>
+                    <button>Hot</button>
+                    <button>New</button>
+                    <button>Top</button>
+                </li>
+
+                <li class="forum__post">
+
+                    <div class="forum__post__sidebar">
+                        <button><i class="fa-solid fa-arrow-up"></i></button>
+                        <p class="upvotes">666</p>
+                        <button><i class="fa-solid fa-arrow-down"></i></button>
+                    </div>
+                    
+                    <div class="forum__post__content">
+                        <div class="post__header">
+                            <a class="header-link" href="http://google.se">r/CuteCats</a>
+                            <p class="posted-by">Posted by u/Solidtop 1 hour ago</p>
+                        </div>
+
+                        <h1 class="post-title">Look at my cute cats!.</h1>
+
+                        <figure class="post-image">
+                            <img src="http://placekitten.com/g/400/400">
+                        </figure>
+
+                        <div class="post__footer">
+                            <button>0 Comments</button>
+                            <button>Award</button>
+                            <button>Share</button>
+                            <button>Save</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="forum__post">
+
+                    <div class="forum__post__sidebar">
+                        <button><i class="fa-solid fa-arrow-up"></i></button>
+                        <p class="upvotes">666</p>
+                        <button><i class="fa-solid fa-arrow-down"></i></button>
+                    </div>
+                    
+                    <div class="forum__post__content">
+                        <div class="post__header">
+                            <a class="header-link" href="http://google.se">r/Programming</a>
+                            <p class="posted-by">Posted by u/Solidtop 1 hour ago</p>
+                        </div>
+
+                        <h1 class="post-title">Programmer tries to make a reddit layout. Fails miserably.</h1>
+
+                        <a class="post-link" href="https://www.qries.com/">https://www.qries.com/</a>
+
+
+                        <div class="post__footer">
+                            <button>0 Comments</button>
+                            <button>Award</button>
+                            <button>Share</button>
+                            <button>Save</button>
+                        </div>
+                    </div>
+
+                    <a href="https://www.qries.com/">
+                            <img class="post-link-image" alt="Qries" src="https://www.qries.com/images/banner_logo.png"
+                            width=150" height="70">
+                    </a>
+                </li>
+
+
+                 <li class="forum__post">
+
+                    <div class="forum__post__sidebar">
+                        <button><i class="fa-solid fa-arrow-up"></i></button>
+                        <p class="upvotes">666</p>
+                        <button><i class="fa-solid fa-arrow-down"></i></button>
+                    </div>
+                    
+                    <div class="forum__post__content">
+                        <div class="post__header">
+                            <a class="header-link" href="http://google.se">r/Nyheter</a>
+                            <p class="posted-by">Posted by u/Solidtop 1 hour ago</p>
+                        </div>
+
+                        <h1 class="post-title">JUST NU: Jordens undergång är närmare än vad du tror.</h1>
+
+                        <a class="post-link" href="https://www.qries.com/">https://www.nyheter.se/</a>
+
+
+                        <div class="post__footer">
+                            <button>0 Comments</button>
+                            <button>Award</button>
+                            <button>Share</button>
+                            <button>Save</button>
+                        </div>
+                    </div>
+
+                    <a href="https://www.qries.com/">
+                            <img class="post-link-image" alt="Qries" src="https://cached-images.bonnier.news/gcs/bilder/dn-mly/053c74a7-c067-4b75-9e9c-46798d8b0738.jpeg?interpolation=lanczos-none&fit=around%7C649:366&crop=649:h;center,top&output-quality=80"
+                            width=150" height="70">
+                    </a>
+                </li>
+            
+                <li class="forum__post">
+
+                    <div class="forum__post__sidebar">
+                        <button><i class="fa-solid fa-arrow-up"></i></button>
+                        <p class="upvotes">666</p>
+                        <button><i class="fa-solid fa-arrow-down"></i></button>
+                    </div>
+                    
+                    <div class="forum__post__content">
+                        <div class="post__header">
+                            <a class="header-link" href="http://google.se">r/CuteCats</a>
+                            <p class="posted-by">Posted by u/Solidtop 1 hour ago</p>
+                        </div>
+
+                        <h1 class="post-title">Look at my cute cat!.</h1>
+
+                        <figure class="post-image">
+                            <img src="http://placekitten.com/g/200/200">
+                        </figure>
+
+                        <div class="post__footer">
+                            <button>0 Comments</button>
+                            <button>Award</button>
+                            <button>Share</button>
+                            <button>Save</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="forum__post">
+
+                    <div class="forum__post__sidebar">
+                        <button><i class="fa-solid fa-arrow-up"></i></button>
+                        <p class="upvotes">666</p>
+                        <button><i class="fa-solid fa-arrow-down"></i></button>
+                    </div>
+                    
+                    <div class="forum__post__content">
+                        <div class="post__header">
+                            <a class="header-link" href="http://google.se">r/Nyheter</a>
+                            <p class="posted-by">Posted by u/Solidtop 1 hour ago</p>
+                        </div>
+
+                        <h1 class="post-title">Lernia: Vi är bäst helt enkelt.</h1>
+
+                        <a class="post-link" href="https://www.qries.com/">https://www.lernia.se</a>
+
+
+                        <div class="post__footer">
+                            <button>0 Comments</button>
+                            <button>Award</button>
+                            <button>Share</button>
+                            <button>Save</button>
+                        </div>
+                    </div>
+
+                    <a href="https://www.qries.com/">
+                            <img class="post-link-image" alt="Qries" src="https://cdn-lerniase-images-prod.azureedge.net/79a3b1c6752641e7b8caf602a97d155d/31730bda57f243d4aaed462bbb76bcc2.jpg?h=587&fit=crop&crop=Faces%2CEntropy&auto=format,compress&w=1600&s=a8069df798e4a53d5993a460a8762579"
+                            width=150" height="70">
+                    </a>
+                </li>
+
+
+                <li class="forum__post">
+
+                    <div class="forum__post__sidebar">
+                        <button><i class="fa-solid fa-arrow-up"></i></button>
+                        <p class="upvotes">666</p>
+                        <button><i class="fa-solid fa-arrow-down"></i></button>
+                    </div>
+                    
+                    <div class="forum__post__content">
+                        <div class="post__header">
+                            <a class="header-link" href="http://google.se">r/CuteCats</a>
+                            <p class="posted-by">Posted by u/Solidtop 1 hour ago</p>
+                        </div>
+
+                        <h1 class="post-title">Look at my cute cat!.</h1>
+
+                        <figure class="post-image">
+                            <img src="http://placekitten.com/g/300/600">
+                        </figure>
+
+                        <div class="post__footer">
+                            <button>0 Comments</button>
+                            <button>Award</button>
+                            <button>Share</button>
+                            <button>Save</button>
+                        </div>
+                    </div>
+                </li>
+
+                 <li class="forum__post">
+
+                    <div class="forum__post__sidebar">
+                        <button><i class="fa-solid fa-arrow-up"></i></button>
+                        <p class="upvotes">666</p>
+                        <button><i class="fa-solid fa-arrow-down"></i></button>
+                    </div>
+                    
+                    <div class="forum__post__content">
+                        <div class="post__header">
+                            <a class="header-link" href="http://google.se">r/Nyheter</a>
+                            <p class="posted-by">Posted by u/Solidtop 1 hour ago</p>
+                        </div>
+
+                        <h1 class="post-title">Experternas tips: Så minskar du din vikt på 15 sekunder.</h1>
+
+                        <a class="post-link" href="https://www.qries.com/">https://www.nyheter.se/</a>
+
+
+                        <div class="post__footer">
+                            <button>0 Comments</button>
+                            <button>Award</button>
+                            <button>Share</button>
+                            <button>Save</button>
+                        </div>
+                    </div>
+
+                    <a href="https://www.qries.com/">
+                            <img class="post-link-image" alt="Qries" src="https://cached-images.bonnier.news/gcs/bilder/dn-mly/053c74a7-c067-4b75-9e9c-46798d8b0738.jpeg?interpolation=lanczos-none&fit=around%7C649:366&crop=649:h;center,top&output-quality=80"
+                            width=150" height="70">
+                    </a>
+                </li>
+
+
+            </ul>
+            
+            <ul class="content__sidebar">
+                <li class="sidebar__item">
+
+                    <h1 class="item__header">Reddit Premium</h1>
+                    <p class="item__content">The best Reddit experience, with monthly coins</p>
+                    <button class="button button--orange">Try Now</button>
+
+                </li>
+                <li class="sidebar__item">
+                    
+                    <h1 class="item__header">Home</h1>
+                    <p class="item__content">Your personal Reddit frontpage. Come here to check in with your favorite communities</p>
+                    <button class="button">Create post</button>
+                    <button class="button button--black">Create Community</button>
+
+                </li>
+
+                <li class="sidebar__item content-policy">
+                    <p>User Agreement</p>
+                    <p>Privacy Policy</p>
+                    <p>___________________________________</p>
+                    <p>English</p>
+                    <p>Francais</p>
+                    <p>Swedish</p>
+                    <p>___________________________________</p>
+                    <p>Axel Asp inc ©. All rights reserved</p>
+
+                </li>
+            </ul>
+        </div>
 
     </div>
     
 </body>
 </html>
+

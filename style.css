@@ -3,37 +3,368 @@
     color: white;
 
     --padding1: 20px;
+    --margin1: 20px;
+
+    --headerHeight: 50px;
+
+    --border1: 1px solid rgba(255, 255, 255, 0.1);
+    --border2: 1px solid white;
+    --borderRadius1: 5px;
+    --borderRadius2: 100px;
+
+    --colorBackground: black;
+    --colorDarkGray: rgb(24, 24, 24);
+    --colorLightGray: rgb(52, 52, 56);
+    --colorGray: rgb(31, 31, 32);
 }
 
 body {
     margin: 0;
     padding: 0;
-    background: black;
+    background: var(--colorBackground);
 }
 
 * {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    font-weight: normal;
 }
-
-.container {
-    display: flex;
-    flex-direction: row;
-}
-
 
 .header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 50px;
+    height: var(--headerHeight);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: var(--border1);
+    border-style: none none solid none;
+    background-color: var(--colorDarkGray);
+}
+
+.header__start, .header__center, .header__end {
+    display: flex;
+}
+
+.header__start, .header__end {
+    flex: 1;
+}
+
+.header__center {
+    flex: 3;
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.header__filter {
+    width: 250px;
+    margin: 5px;
+    padding-left: 30px;
+}
+
+.home-icon {
+    position: relative;
+    top: 13px;
+    left: 30px;
+    font-size: 1.2rem;
+}
+
+.header__search {
+    width: 80%;
+    height: 40px;
+    padding-left: 40px;
+
+    border-radius: var(--borderRadius2);
+}
+
+.search-icon {
+    position: relative;
+    top: 13px;
+    left: 30px;
+}
+
+.header__toolbar {
+    flex: 1;
     display: flex;
     align-items: center;
-    flex-shrink: 0;
-    padding: 0 var(--padding1);
 
-    background-color: red;
+    margin: 10px;
+    border: var(--border1);
+    border-style: none none none solid;
+}
+
+.button-toolbar {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background: none;
+
+    border-radius: var(--borderRadius1);
+    color: white;
+    font-size: 1.3rem;
+}
+
+.header__user-profile {
+    padding: 10px;
+    display: flex;
+    font-size: .9rem;
+}
+
+.user-icon {
+    padding: 10px;
+    font-size: 1.3rem;
 }
 
 .content {
-    flex: 1;
+    width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+} 
 
-    background-color: green;
+.forum {
+    flex: 2;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
 }
- 
+
+.forum__post {
+    height: fit-content;
+    margin: 10px 0;
+    display: flex;
+
+    border: var(--border1);
+    border-radius: var(--borderRadius1);
+    background-color: var(--colorGray);
+}
+
+.forum__post:hover {
+    outline: var(--border2);
+}
+
+.forum__post__sidebar {
+    width: 20px;
+    padding: 10px;
+
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.forum__post__sidebar button:hover {
+    border-radius: var(--borderRadius1);
+    color: orangered;
+}
+
+.upvotes {
+    font-size: .7rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.forum__post__content {
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post__header {
+    display: flex;
+}
+
+.header-link {
+    color: white;
+    font-size: .8rem;
+}
+
+.posted-by {
+    margin: 0 15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: .8rem;
+}
+
+.post-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.post-image {
+    margin: 10px auto;
+}
+
+.post-link {
+    margin-bottom: 40px;
+    
+    color: rgb(35, 137, 255);
+}
+
+.post-link-image {
+    width: 150px;    
+    height: 100px;
+    margin: 10px;
+    object-fit: contain;
+
+    border: 1px solid white;
+    border-radius: var(--borderRadius1);
+}
+
+.post__footer {
+    display: flex;
+}
+
+.create-post, .filter-by {
+    height: 60px;
+    margin: 20px 0;
+}
+
+.create-post:hover, .filter-by:hover {
+    outline: none;
+}
+
+.create-post-input {
+    width: 100%;
+    margin: 10px;
+
+    border-radius: var(--borderRadius1);
+}
+
+.content__sidebar {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.sidebar__item {
+    height: fit-content;
+    margin: var(--margin1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: var(--border1);
+    border-radius: var(--borderRadius1);
+    background-color: var(--colorGray);
+}
+
+.item__header {
+    font-size: 1.1rem;
+}
+
+.item__content {
+    margin: 5px 0;
+    font-size: .9rem;
+}
+
+.content-policy {
+    top: calc(var(--headerHeight) + 10px);
+    position: sticky;
+    font-size: .8rem;
+}
+
+.button--orange {
+    background-color: orangered;
+}
+
+.button--black {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.filter-by button {
+    width: 80px;
+    margin: 10px 5px;
+    align-self: center;
+
+    border: none;
+    border-radius: var(--borderRadius2);
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: .8rem;
+}
+
+.forum__post__sidebar button {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.post__footer button {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 2px;
+    padding: 10px;
+    
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-size: .7rem;
+}
+
+button {
+    width: 100%;
+    height: 35px;
+    display: block;
+    margin: 5px 0;
+
+    border: none;
+    border-radius: var(--borderRadius2);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+input {
+    margin: none;
+    padding: 0 20px;
+
+    outline: none;
+    border: var(--border1);
+    color: white;
+    background-color: var(--colorLightGray);
+}
+
+input:hover {
+    outline: var(--border2);
+}
+
+input:active {
+    outline: none;
+}
+
+select {
+    font-size: .8rem;
+    border: none;
+    color: white;
+    background-color: var(--colorDarkGray);
+}
+
+select:hover {
+    outline: var(--border1);
+    border-radius: var(--borderRadius1);
+}
+
+
